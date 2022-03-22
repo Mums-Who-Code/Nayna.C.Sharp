@@ -20,8 +20,6 @@
                 yourJoiningDate = Console.ReadLine();
                 var isValidDate = DateTime.TryParse(yourJoiningDate, out dt);
 
-
-
                 if (isValidDate)
                 {
                     Console.WriteLine($"My name is {name}.");
