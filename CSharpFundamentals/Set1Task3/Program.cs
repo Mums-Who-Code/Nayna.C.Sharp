@@ -10,8 +10,6 @@
             Console.WriteLine("Enter your name :");
             name = Console.ReadLine().Trim();
 
-
-
             if (name == null || name == "")
             {
                 Console.WriteLine("Invalid Input.");
@@ -34,6 +32,7 @@
                     Console.WriteLine("This is not a valid date string.");
                 }
             }
+
             Console.ReadLine();
         }
     }
