@@ -1,4 +1,4 @@
-﻿namespace Set1Task3
+﻿namespace Set1Task4
 {
     public class Program
     {
