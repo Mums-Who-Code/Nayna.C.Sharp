@@ -6,25 +6,42 @@
         {
             int a = 23;
             int b = 7;
-            Program program = new Program();
-            int c1 = program.problem1(a, b);
-            Console.WriteLine("Value of a+++--b = " + c1);
-            int c2 = program.problem2(a, b);
-            Console.WriteLine("Value of ++a*(++b) = " + c2);
+            var program = new Program();
+            int c1 = program.problemAddition(a, b);
+            Console.WriteLine("Value of (a++)+(--b) = " + c1);
+            int c2 = program.problemMultiply(a, b);
+            Console.WriteLine("Value of (++a)*(++b) = " + c2);
+            int c3 = program.problemSubstraction(a, b);
+            Console.WriteLine("Value of (a++)-(--b) = " + c3);
+            int c4 = program.problemDivision(a, b);
+            Console.WriteLine("Value of (++a)/(++b) = " + c4);
         }
 
-        public int problem1(int a, int b)
+        public int problemAddition(int a, int b)
         {
             int a1 = a++;
             int b1 = --b;
             return a1 + b1;
         }
 
-        public int problem2(int a, int b)
+        public int problemMultiply(int a, int b)
         {
             int a1 = ++a;
             int b1 = ++b;
             return a1 * b1;
+        }
+
+        public int problemSubstraction(int a, int b)
+        {
+            int a1 = a++;
+            int b1 = --b;
+            return a1 - b1;
+        }
+        public int problemDivision(int a, int b)
+        {
+            int a1 = ++a;
+            int b1 = ++b;
+            return a1 / b1;
         }
     }
 }
