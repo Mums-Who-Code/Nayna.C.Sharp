@@ -10,6 +10,7 @@
             List<int> secondPlayer = new List<int> { 1, 5, 10, 25, 50 };
             Random random = new Random();
             int count = 0;
+
             while (count < 5)
             { 
                 count++;
@@ -34,8 +35,10 @@
                     totalPointSecondPlayer = totalPointSecondPlayer + 0.5;
                 }
             }
+
             Console.WriteLine("First Player's points: "+ totalPointFirstPlayer);
             Console.WriteLine("Second Player's points: " + totalPointSecondPlayer);
+
             if (totalPointFirstPlayer > totalPointSecondPlayer)
             {
                 Console.WriteLine("First Player won the game.");
