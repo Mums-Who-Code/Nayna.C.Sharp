@@ -6,48 +6,42 @@
         {
             int a = 23;
             int b = 7;
-            int c1 = problemAddition(a, b);
-            Console.WriteLine("Value of (a++)+(--b) = " + c1);
+            Console.WriteLine("Initially values of a and b are " + a + " and " + b);
             Console.WriteLine();
-            int c2 = problemMultiply(a, b);
-            Console.WriteLine("Value of (++a)*(++b) = " + c2);
+            int c = problemAddition(a++, --b);
+            Console.WriteLine("Value of a+b = " + c);
             Console.WriteLine();
-            int c3 = problemSubstraction(a, b);
-            Console.WriteLine("Value of (a++)-(--b) = " + c3);
+            c = problemMultiply(a++, --b);
+            Console.WriteLine("Value of a*b = " + c);
             Console.WriteLine();
-            int c4 = problemDivision(a, b);
-            Console.WriteLine("Value of (++a)/(++b) = " + c4);
+            c = problemSubstraction(a++, --b);
+            Console.WriteLine("Value of a-b = " + c);
+            Console.WriteLine();
+            c = problemDivision(a++, --b);
+            Console.WriteLine("Value of a/b = " + c);
         }
 
         public static int problemAddition(int a, int b)
         {
-            int a1 = a++;
-            int b1 = --b;
-            Console.WriteLine("Values of a++ and --b are " + a1 +" and " + b1);
-            return a1 + b1;
+            Console.WriteLine("After increment and decrement values of a and b are  " + a + " and " + b);
+            return a + b;
         }
 
         public static int problemMultiply(int a, int b)
         {
-            int a1 = ++a;
-            int b1 = ++b;
-            Console.WriteLine("Values of ++a and ++b are " + a1 + " and " + b1);
-            return a1 * b1;
+            Console.WriteLine("After increment and decrement values of a and b are  " + a + " and " + b);
+            return a * b;
         }
 
         public static int problemSubstraction(int a, int b)
         {
-            int a1 = a++;
-            int b1 = b++;
-            Console.WriteLine("Values of a++ and b++ are " + a1 + " and " + b1);
-            return a1 - b1;
+            Console.WriteLine("After increment and decrement values of a and b are  " + a + " and " + b);
+            return a - b;
         }
         public static int problemDivision(int a, int b)
         {
-            int a1 = ++a;
-            int b1 = b--;
-            Console.WriteLine("Values of ++a and b-- are " + a1 + " and " + b1);
-            return a1 / b1;
+            Console.WriteLine("After increment and decrement values of a and b are  " + a + " and " + b);
+            return a / b;
         }
     }
 }
